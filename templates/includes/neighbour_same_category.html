@@ -1,0 +1,32 @@
+<!-- Plugin: neighbour -->
+<div class="row">
+<!--<ul>-->
+{% if article.prev_article_in_category %}
+<div class="well" style="float: left; text-align: left">
+     <p style="text-align: left">
+	&lt;= Previous article in this category
+     </p>
+     <li style="text-align: left">
+         <a href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
+             {{ article.prev_article_in_category.title }}
+         </a>
+     </li>
+</div>
+ {% endif %}
+ {% if article.next_article_in_category %}
+	 <div class="well text-right"; style="float: right; text-align: right">
+     <p style="text-align: right">
+	Next article in this category =>
+     </p>
+     <li style="text-align: right; max-width:35ch; word-wrap:break-word">
+         <a right href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
+             {{ article.next_article_in_category.title }}
+         </a>
+     </li>
+ </div>
+ {% endif %}
+ <!--</ul>-->
+</div>
+{% if (article.prev_article_in_category) or (article.next_article_in_category) %}
+  <hr>
+{% endif %}

@@ -215,7 +215,12 @@
 
 {% include 'includes/footer.html' %}
 
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
+<!-- https://jquery.com/download -->
+<!-- https://github.com/jquery/jquery/releases -->
+<!-- Using jquery 3.5.1-->
+
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
@@ -232,7 +237,8 @@
 {% endif %}
 {% include 'includes/sidebar/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
-{% include 'includes/ga.html' %}
+<!-- Disable include of includes/ga.html, as the default one had no consent checking -->
+{% include 'includes/ga_check_consent.html' %}
 {% include 'includes/piwik.html' %}
 
 {% if 'liquid_tags.notebook' in PLUGINS %}
@@ -240,5 +246,11 @@
 {% endif %}
 
 {% block scripts %}{% endblock %}
+
+<!-- For Cookie Consent 2-->
+{% include 'includes/cookie_consent2.html' %}
+
+<noscript>Your browser does not support JavaScript.</noscript>
+
 </body>
 </html>

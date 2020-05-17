@@ -83,16 +83,36 @@
                 <div class="panel">
                     <div class="panel-body">
                         {% include "includes/article_info.html" %}
+			<!-- Plugin: pelican-ert -->
+			{% if article.ert %}
+			<span class="label label-pelican-ert"></span>
+			<span id="pelican-ert">
+				<i class="fa fa-folder-open"></i>
+			<b>Estimated Read Time:</b>
+			</span>
+			<strong>{{ article.ert }} </strong>
+			{% endif %}
                     </div>
                 </div>
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
+	    <!-- Plugin: share_posts -->
+	    {% include 'includes/share_posts.html' %}
+	    <!-- Plugin: neighbour -->
+	    {% include 'includes/neighbour_same_category.html' %}
+            {% include 'includes/comments.html' %}
+	    <!-- Plugin: similar_posts -->
+            {% include 'includes/similar_posts.html' %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/series.html' %}
             {% include 'includes/addthis.html' %}
             {% include 'includes/shariff.html' %}
             {% include 'includes/comments.html' %}
+    	    <!-- Custom setting: IntenseDebate -->
+            {% include 'includes/comments_intensedebate.html' %}
+ 	    <!-- Custom: Twitter -->
+            {% include 'includes/twitter_custom.html' %}
             {% include 'includes/show_source.html' %}
         </article>
     </section>
@@ -110,4 +130,5 @@
     <!-- add shariff support -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
 {% endif %}
+
 {% endblock %}
