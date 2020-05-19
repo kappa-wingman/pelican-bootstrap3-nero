@@ -10,11 +10,13 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
-* Version 1.1
+- Version 1.1
+
   - Disable loading of (unused) fonts from https://fonts.googleapis.com in static/tipuesearch.css
 
-* Version 1.0
-* Release date: 2020-May
+- Version 1.0
+
+  - Release date: 2020-May
 
 - Enabled Google Analytics with consent_cookies2
 
