@@ -66,10 +66,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 // console.log ("After google js.");
 
-//ga('create', gaProperty, 'auto');
 // display features and setting the '&uid' parameter are optional, but if you use them they do require a cookie consent
 
-ga('create', gaProperty, '{{ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY }}');
+ga('create', '{{ GOOGLE_ANALYTICS_UNIVERSAL }}', '{{ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY }}');
 ga('set', 'forceSSL', true);
 ga('set', 'anonymizeIp', true);
 ga('send', 'pageview');

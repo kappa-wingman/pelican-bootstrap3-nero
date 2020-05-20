@@ -10,6 +10,10 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Version 1.2
+
+  - Fixing the tag for Google Analytics
+
 - Version 1.1
 
   - Disable loading of (unused) fonts from https://fonts.googleapis.com in static/tipuesearch.css
