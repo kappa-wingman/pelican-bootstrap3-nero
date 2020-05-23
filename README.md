@@ -28,6 +28,7 @@ We have new settings specific to this theme, also check CHANGELOG.rst
 * Display at bottom of articles. If you have ad-block software it may not be displayed
 	Enable it in pelicanconf.py, TWITTER_CUSTOM = True
 * JSON-LD
+	* Based on existing work from https://github.com/alexandrevicenzi/Flex. Thanks to Alexandre.
 	* For base / includes/json_ld.html: If enabled, there would be two JSON+LD blocks for articles
 	* JSON_LD = False
 	* For includes/articles.html:
