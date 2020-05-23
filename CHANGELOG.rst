@@ -10,6 +10,12 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Version 1.3
+
+  - Adding JSON-LD
+  - Use a separate variable for og:description
+  - Rename original README.md to README-pelican-bootstrap3.md and have a readme for this theme
+
 - Version 1.2
 
   - Fixing the tag for Google Analytics
