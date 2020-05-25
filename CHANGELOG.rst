@@ -10,6 +10,13 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- tipuesearch in base.html. html5validator warns that the search form should not be inside 'span' section.
+  Removed span tags
+
+- Version 1.3.2
+
+  - Use article.description if the articles have it, else try to use article.summary
+
 - Version 1.3
 
   - Adding JSON-LD
