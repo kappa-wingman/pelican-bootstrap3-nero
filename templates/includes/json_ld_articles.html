@@ -6,8 +6,8 @@
     "@type": "WebPage",
     "@id": "{{ SITEURL }}/{{ article.url }}"
   },
-  "name": "{{ article.title|striptags }}",
-  "headline": "{{ article.title|striptags }}",
+  "name": "{{ article.title|striptags|escape }}",
+  "headline": "{{ article.title|striptags|escape }}",
   "datePublished": "{{ article.date.strftime("%Y-%m-%d") }}",
   {% if article.modified %}
   "dateModified": "{{ article.modified.strftime("%Y-%m-%d") }}",
@@ -21,7 +21,13 @@
   {% if article.tags %}
   "keywords": "{{ article.tags|join(',') }}",
   {% endif %}
-  "description": "{{ article.summary|striptags }}",
+  {% if article.description %}
+  "description": "{{ article.description }}",
+  {% else %}
+    {% if article.summary %}
+  "description": "{{ article.summary|striptags|escape }}",
+    {% endif %}
+  {% endif %}
   "image" : "{{ SITEURL }}/{{ SITE_LOGO }}",
   "publisher": {
     "@type": "Organization",

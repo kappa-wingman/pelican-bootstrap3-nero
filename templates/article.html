@@ -10,8 +10,12 @@
     {% if article.tags %}
         <meta name="keywords" content="{{ article.tags|join(',')|striptags }}" />
     {% endif %}
-    {% if article.summary %}
-        <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    {% if article.description %}
+        <meta name="description" content="{{ article.description }}" />
+      {% else %}
+      {% if article.summary %}
+         <meta name="description" content="{{ article.summary|striptags|escape }}" />
+      {% endif %}
     {% endif %}
 {% endblock %}
 {% block opengraph %}
@@ -23,7 +27,13 @@
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="{{ article.title|striptags|escape }}"/>
         <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
-        <meta property="og:description" content="{{ article.summary|striptags|escape }}"/>
+        {% if article.description %}
+        <meta property="og:description" content="{{ article.description }}" />
+        {% else %}
+          {% if article.summary %}
+            <meta property="og:description" content="{{ article.summary|striptags|escape }}" />
+          {% endif %}
+        {% endif %}
         <meta property="article:published_time" content="{{ article.date.strftime("%Y-%m-%d") }}" />
 	{% if article.modified %}
             <meta property="article:modified_time" content="{{ article.modified.strftime("%Y-%m-%d") }}" />
