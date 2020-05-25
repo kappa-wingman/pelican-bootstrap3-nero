@@ -28,12 +28,16 @@ We have new settings specific to this theme, also check CHANGELOG.rst
 * Display at bottom of articles. If you have ad-block software it may not be displayed
 	Enable it in pelicanconf.py, TWITTER_CUSTOM = True
 * JSON-LD
-	* Based on existing work from https://github.com/alexandrevicenzi/Flex. Thanks to Alexandre.
-	* For base / includes/json_ld.html: If enabled, there would be two JSON+LD blocks for articles
-	* JSON_LD = False
-	* For includes/articles.html:
-	* JSON_LD_ARTICLES = True
+	* JSON_LD = True
+	* Based on existing work from https://github.com/alexandrevicenzi/Flex . Thanks to Alexandre.
+	* Based on existing work from https://github.com/emoji-gen/blog/blob/master/theme/templates/includes/article_structured-data.html Thanks to Emoj-Gen and Pine.
+	* For base / includes/json_ld.html;
+	* If enabled, there would be JSON-LD blocks for
+	* Type Blog for all html
+	* Type Articles for all articles
 * JSON-LD, article image and publisher logo are required by Google schema checking
 	* SITE_LOGO = 'images/your-image.jpg'
 	* PUBLISHER_LOGO = 'images/your-image.jpg'
-
+* JSON_LD_BREADCRUMBLIST = True
+	* If both JSON_LD is also enabled:
+	* Add type BreadcrumbList for all html

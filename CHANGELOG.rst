@@ -10,6 +10,10 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Version 1.4.0
+
+  - Rewrite support for JSON-LD
+
 - Version 1.3.3
 
   - Fix html5validators warnings
