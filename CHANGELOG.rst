@@ -10,9 +10,12 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
-- tipuesearch in base.html. html5validator warns that the search form should not be inside 'span' section.
-  Removed span tags
-- id="tags" conflict in tags.html and tag_cloud.html, changed the id name in tag_cloud.html
+- Version 1.3.3
+
+  - Fix html5validators warnings
+  - tipuesearch in base.html. html5validator warns that the search form should not be inside 'span' section.
+    Removed span tags
+  - id="tags" conflict in tags.html and tag_cloud.html, changed the id name in tag_cloud.html
 
 - Version 1.3.2
 
