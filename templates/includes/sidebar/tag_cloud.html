@@ -11,7 +11,8 @@
   {% endif %}
 
 <!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
+<section class="well">
+<!--<li class="list-group-item">-->
   <a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4>{{ title(_('Tags'), DISABLE_SIDEBAR_TITLE_ICONS, icon='tags') }}</h4></a>
   <ul class="list-group {% if DISPLAY_TAGS_INLINE %}list-inline tagcloud{% endif %}" id="tagcloud-tags">
     {% for tag in tags %}
@@ -22,6 +23,7 @@
     </li>
     {% endfor %}
   </ul>
-</li>
+<!--</li>-->
+</section>
 <!-- End Sidebar/Tag Cloud -->
 {% endif %}

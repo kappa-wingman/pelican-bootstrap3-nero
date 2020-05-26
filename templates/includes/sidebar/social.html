@@ -2,7 +2,8 @@
   {% from 'includes/sidebar/macros.jinja' import title %}
 
 <!-- Sidebar/Social -->
-<li class="list-group-item">
+<section class="well">
+<!--<li class="list-group-item">-->
   <h4>{{ title(_('Social Contact'), DISABLE_SIDEBAR_TITLE_ICONS) }}</h4>
   <ul class="list-group" id="social">
     {% for s in SOCIAL %}
@@ -19,6 +20,7 @@
     <li class="list-group-item"><a href="{{ s[1] }}"><i class={{ iconattributes }}></i> {{ s[0] }}</a></li>
     {% endfor %}
   </ul>
-</li>
+<!--</li>-->
+</section>
 <!-- End Sidebar/Social -->
 {% endif %}
