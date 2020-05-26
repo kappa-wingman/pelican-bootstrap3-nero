@@ -4,6 +4,10 @@ Pelican-bootstrap3 is a Bootstrap 3 theme for Pelican, originally developed by [
 
 Pelican-bootstrap3-nero is forked from pelican-bootstrap3 and customized. It is a dark theme.
 
+## Screenshot
+
+![](screenshot.png)
+
 ## Usage
 
 All the parameters used by pelican-bootstrap3 are still usable.
@@ -29,8 +33,8 @@ We have new settings specific to this theme, also check CHANGELOG.rst
 	Enable it in pelicanconf.py, TWITTER_CUSTOM = True
 * JSON-LD
 	* JSON_LD = True
-	* Based on existing work from https://github.com/alexandrevicenzi/Flex . Thanks to Alexandre.
-	* Based on existing work from https://github.com/emoji-gen/blog/blob/master/theme/templates/includes/article_structured-data.html Thanks to Emoj-Gen and Pine.
+	* Based on existing work from [Flex](https://github.com/alexandrevicenzi/Flex). Thanks to Alexandre
+	* Based on existing work from [Emoji-gen](https://github.com/emoji-gen/blog/blob/master/theme/templates/includes/article_structured-data.html). Thanks to Emoj-Gen and Pine.
 	* For base / includes/json_ld.html;
 	* If enabled, there would be JSON-LD blocks for
 	* Type Blog for all html
@@ -41,7 +45,7 @@ We have new settings specific to this theme, also check CHANGELOG.rst
 * JSON_LD_BREADCRUMBLIST = True
 	* If both JSON_LD is also enabled:
 	* Add type BreadcrumbList for all html
-
-## Screenshot
-
-![](screenshot.png)
+* Copy button on the top right corner of all "div.highlight pre" elements
+	* SPHINX_COPYBUTTON = True
+	* Adopted from [sphinx copybutton](https://github.com/executablebooks/sphinx-copybutton)
+	* Credits for the copy button goes to [Chris Holdgraf](https://github.com/choldgraf)

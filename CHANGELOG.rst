@@ -10,6 +10,12 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Version 1.5.0
+
+  - Added a copy button for code block
+  - Move archive, categories, recent_posts, social, tag_cloud to separated sections in sidebar
+  - Minor icons or UI improvement
+
 - Version 1.4.0
 
   - Rewrite support for JSON-LD
@@ -37,7 +43,8 @@ Changes, newer changes on top
 
 - Version 1.1
 
-  - Disable loading of (unused) fonts from https://fonts.googleapis.com in static/tipuesearch.css
+  - Disable loading of (unused) fonts from
+    `Google Fonts <https://fonts.googleapis.com>`__ in static/tipuesearch.css
 
 - Version 1.0
 
