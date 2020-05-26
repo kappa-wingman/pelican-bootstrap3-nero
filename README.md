@@ -41,3 +41,7 @@ We have new settings specific to this theme, also check CHANGELOG.rst
 * JSON_LD_BREADCRUMBLIST = True
 	* If both JSON_LD is also enabled:
 	* Add type BreadcrumbList for all html
+
+## Screenshot
+
+![](screenshot.png)
