@@ -10,9 +10,11 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
-- Use collapsable display in Recent Posts in sidebar
-- Reworked Archives
-- Fixed the layout for neighbour articles
+- Version 1.5.1
+
+  - Use collapsable display for Recent Posts and Archive in sidebar
+  - Reworked Archives
+  - Fixed the layout for neighbour articles
 
 - Version 1.5.0
 
