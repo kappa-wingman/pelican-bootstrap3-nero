@@ -117,6 +117,35 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {%- endif %}
 
+    <!-- For JSON+LD included in base.html -->
+    {% if JSON_LD %}
+      {% include 'includes/json_ld.html' %}
+    {% endif %}
+
+    <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
+    <!-- https://jquery.com/download -->
+    <!-- https://github.com/jquery/jquery/releases -->
+    <!-- Using jquery 3.5.1-->
+
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+
+    {% if SPHINX_COPYBUTTON %}
+      <!-- clipboard.js and copy button -->
+      <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/copybutton.js"></script>
+      <!-- https://github.com/zenorocha/clipboard.js -->
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha384-x6nRSkfSsKGBsvlLFHHNju+buS3zYUztVnTRz/0JKgOIk3ulS6bNce/vHOvYE2eY" crossorigin="anonymous"></script>
+    {% endif %}
+
+    <!-- For the sizing of top navbar to collapse sooner -->
+    <script type="text/javascript">
+      $('#monitor').html($(window).width());
+
+      $(window).resize(function() {
+      var viewportWidth = $(window).width();
+      $('#monitor').html(viewportWidth);
+      });
+    </script>
+
 </head>
 <body>
 
@@ -219,25 +248,14 @@
 
 {% include 'includes/footer.html' %}
 
-<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
-<!-- https://jquery.com/download -->
-<!-- https://github.com/jquery/jquery/releases -->
-<!-- Using jquery 3.5.1-->
-
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<!-- Loading of jQuery moved to head -->
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
-
-{% if SPHINX_COPYBUTTON %}
-<!-- clipboard.js and copy button -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/copybutton.js"></script>
-<!-- https://github.com/zenorocha/clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha384-x6nRSkfSsKGBsvlLFHHNju+buS3zYUztVnTRz/0JKgOIk3ulS6bNce/vHOvYE2eY" crossorigin="anonymous"></script>
-{% endif %}
+<!-- Remove this JS, IE8 is obsoleted -->
+<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script> -->
 
 {% if CUSTOM_JS %}
     <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"></script>
@@ -257,11 +275,6 @@
 {% endif %}
 
 {% block scripts %}{% endblock %}
-
-<!-- For JSON+LD included in base.html -->
-{% if JSON_LD %}
-  {% include 'includes/json_ld.html' %}
-{% endif %}
 
 <!-- For Cookie Consent 2-->
 {% include 'includes/cookie_consent2.html' %}
