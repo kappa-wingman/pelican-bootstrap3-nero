@@ -1,0 +1,14 @@
+.archive_table_by_year {
+  border-style: none;
+  table-layout: fixed;
+}
+.archive_table_by_year_date_col {
+  text-align: left;
+  vertical-align: middle;
+  min-width: 14ch;
+  white-space: nowrap;
+}
+.archive_table_by_year_url_col {
+  min-width: 80%;
+  max-width: 80%;
+}

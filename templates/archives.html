@@ -12,15 +12,22 @@
 {% block content %}
     <section id="content">
       <h1>{{ _('Archives for') }} {{ SITENAME }}</h1>
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/archives.css" type="text/css"/>
         <div id="archives">
 	  {% for year, date_year in dates|groupby('date.year')|sort(reverse=True) %}
 	    <h2>{{ year }}</h2>
+	    <table class="archive_table_by_year" id="archive_table_{{ year }}" border="0" style="table-layout: fixed">
 	    {% for article in date_year %}
-   	      <p>
-              <span class="categories-timestamp"><time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime("%Y-%m-%d") }}</time></span>
-	      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
-	      </p>
+		<tr>
+		<td class="archive_table_by_year_date_col" style="text-align: left; vertical-align: middle; min-width: 14ch; white-space: nowrap">
+                <time datetime="{{ article.date.isoformat() }}">&nbsp;&nbsp;{{ article.date|strftime("%B %d") }}</time>
+		</td>
+		<td class="archive_table_by_year_url_col" style="min-width: 80%; max-width: 80%">
+		  <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
+		</td>
+		</tr>
             {% endfor %}
+	    </table>
           {% endfor %}
         </div>
     </section>
