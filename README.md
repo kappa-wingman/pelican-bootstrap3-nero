@@ -1,8 +1,11 @@
 # pelican-bootstrap3-nero
 
-Pelican-bootstrap3 is a Bootstrap 3 theme for Pelican, originally developed by [DandyDev] (https://github.com/DandyDev). It's fully responsive and contains sub-themes from the Bootswatch project. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and higher.
+Pelican-bootstrap3 is a Bootstrap 3 theme for Pelican, originally developed by [DandyDev](https://github.com/DandyDev). It's fully responsive and contains sub-themes from the Bootswatch project. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and higher.
 
 Pelican-bootstrap3-nero is forked from pelican-bootstrap3 and customized. It is a dark theme.
+
+## Demo site
+[My blog: Kappa ICT Wingman](https://www.kappawingman.com)
 
 ## Screenshot
 
