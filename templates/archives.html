@@ -17,7 +17,7 @@
 	    <h2>{{ year }}</h2>
 	    {% for article in date_year %}
    	      <p>
-              <span class="categories-timestamp"><time datetime="{{ article.date.        isoformat() }}">{{ article.date|strftime("%B %d") }}</time></span>
+              <span class="categories-timestamp"><time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime("%Y-%m-%d") }}</time></span>
 	      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
 	      </p>
             {% endfor %}
