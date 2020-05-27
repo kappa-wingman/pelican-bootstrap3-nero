@@ -16,16 +16,16 @@
         <div id="archives">
 	  {% for year, date_year in dates|groupby('date.year')|sort(reverse=True) %}
 	    <h2>{{ year }}</h2>
-	    <table class="archive_table_by_year" id="archive_table_{{ year }}" border="0" style="table-layout: fixed">
+	    <table class="archive_table_by_year" id="archive_table_{{ year }}">
 	    {% for article in date_year %}
-		<tr>
-		<td class="archive_table_by_year_date_col" style="text-align: left; vertical-align: middle; min-width: 14ch; white-space: nowrap">
-                <time datetime="{{ article.date.isoformat() }}">&nbsp;&nbsp;{{ article.date|strftime("%B %d") }}</time>
-		</td>
-		<td class="archive_table_by_year_url_col" style="min-width: 80%; max-width: 80%">
-		  <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
-		</td>
-		</tr>
+	      <tr>
+	      <td class="archive_table_by_year_date_col">
+		<time datetime="{{ article.date.isoformat() }}">&nbsp;&nbsp;{{ article.date|strftime("%B %d") }}</time>
+	      </td>
+              <td class="archive_table_by_year_url_col">
+		<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
+	      </td>
+	      </tr>
             {% endfor %}
 	    </table>
           {% endfor %}
