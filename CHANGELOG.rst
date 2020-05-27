@@ -10,6 +10,9 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Reworked Archives
+- Fixed the layout for neighbour articles
+
 - Version 1.5.0
 
   - Added a copy button for code block
