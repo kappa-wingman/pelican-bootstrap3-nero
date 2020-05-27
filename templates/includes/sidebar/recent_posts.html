@@ -4,17 +4,17 @@
     {% set RECENT_POST_COUNT = 5 %}
   {% endif %}
 
-<div class="well well-sm accordion" id="sb_accordion_Recent_Posts">
+<div class="well well-sm accordion" id="sb_accordion_RecentPosts">
   <div class="card">
-    <div class="card-header" id="sb_Recent_Posts_Heading">
+    <div class="card-header" id="sb_RecentPosts_Heading">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_sb_RecentPosts" aria-expanded="true" aria-controls="collapse_sb_RecentPosts">
 	  <i class="fa fa-chevron-up pull-left"></i>Recent Posts
         </button>
       </h2>
     </div>
 
-    <div id="collapseOne" class="collapse multi-collapse" aria-labelledby="sb_Recent_Posts_Heading" data-parent="#sb_accordion_Recent_Posts">
+    <div id="collapse_sb_RecentPosts" class="collapse multi-collapse" aria-labelledby="sb_RecentPosts_Heading" data-parent="#sb_accordion_RecentPosts">
       <!-- <div class="card card-body"> -->
       <!-- <div class="well"> -->
       {% for article in articles[:RECENT_POST_COUNT] %}

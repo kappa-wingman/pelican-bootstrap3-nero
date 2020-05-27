@@ -10,9 +10,14 @@ Pelican-bootstrap3-nero is forked from pelican-bootstrap3 and customized. It is 
 
 ## Usage
 
-All the parameters used by pelican-bootstrap3 are still usable.
+* Most of the parameters used by pelican-bootstrap3 are still usable.
+This theme changed a lot from the original theme.
+Some of the parameters may not work.
 
-We have new settings specific to this theme, also check CHANGELOG.rst
+* Know problems
+	* DISABLE_SIDEBAR_TITLE_ICONS may not be working
+
+* We have new settings specific to this theme, also check CHANGELOG.rst
 
 * Setup Cookie Consent 2
 	* COOKIE_CONSENT2 = True
