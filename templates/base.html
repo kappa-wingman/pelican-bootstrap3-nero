@@ -208,16 +208,7 @@ $(document).ready(function () {
 		   </div> <!-- class dropdown -->
 		</li>
 
-<!--
-                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                        <li {% if cat == category %}class="active"{% endif %}>
-                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
-                        </li>
-                    {% endfor %}
-                {% endif %}
--->
-            </ul>
+            </ul> <!-- <ul class="nav navbar-nav"> -->
             <ul class="nav navbar-nav navbar-right">
             {% if 'tipue_search' in PLUGINS %}
               <li>

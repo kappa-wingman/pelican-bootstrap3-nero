@@ -1,16 +1,21 @@
 pelican-bootstrap3-nero
 -----------------------
 
-This theme is copied from pelican-bootstrap3 with some customization.
+This theme is copied from pelican-bootstrap3 with lots of customization.
 
 I could not update the related changes that should be made for translation (foreign languages).
 
 Use it at your own risk.
 
+- Since version 2.0, the changes and parameters would be incompatible with
+the original pelican-bootstrap3. Version 1.x would be more like pelican-bootstrap3.
+
 Changes, newer changes on top
 -----------------------------
 
-- Responsive code block for pygments (highlighttable)
+- Version 2.0
+
+  - Responsive code block for pygments (highlighttable), need changes to CSS to use it
 
 - Version 1.5.1
 
