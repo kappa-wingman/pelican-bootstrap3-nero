@@ -10,6 +10,8 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
+- Responsive code block for pygments (highlighttable)
+
 - Version 1.5.1
 
   - Use collapsable display for Recent Posts and Archive in sidebar
