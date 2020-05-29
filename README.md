@@ -18,7 +18,7 @@ This theme changed a lot from the original theme.
 Some of the parameters may not work.
 
 * Know problems
-	* DISABLE_SIDEBAR_TITLE_ICONS may not be working
+	* DISABLE_SIDEBAR_TITLE_ICONS may not be working because of code changes
 
 * We have new settings specific to this theme, also check CHANGELOG.rst
 
