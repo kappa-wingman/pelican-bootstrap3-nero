@@ -16,7 +16,6 @@
 
     <div id="collapse_sb_RecentPosts" class="collapse multi-collapse" aria-labelledby="sb_RecentPosts_Heading" data-parent="#sb_accordion_RecentPosts">
       <!-- <div class="card card-body"> -->
-      <!-- <div class="well"> -->
       {% for article in articles[:RECENT_POST_COUNT] %}
          <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
       {% endfor %}
