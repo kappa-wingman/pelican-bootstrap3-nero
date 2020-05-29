@@ -156,9 +156,12 @@
       $('#monitor').html(viewportWidth);
       });
 
-$(document).ready(function () {
+      $(document).ready(function () {
+        <!-- for highlighttable converted by pygments wrap under table-responsive -->
 	$(".highlighttable").wrap("<div class='table-responsive'></div>");
-});
+        <!-- for table converted by docutils and wrap under table-responsive -->
+	$("table.docutils").wrap("<div class='table-responsive'></div>");
+      });
 
     </script>
 
