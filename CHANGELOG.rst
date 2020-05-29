@@ -8,10 +8,16 @@ I could not update the related changes that should be made for translation (fore
 Use it at your own risk.
 
 - Starting with version 2.0, the changes and parameters may be incompatible with
-the original pelican-bootstrap3. Version 1.x would be more like pelican-bootstrap3.
+  the original pelican-bootstrap3. Version 1.x would be more like pelican-bootstrap3.
 
 Changes, newer changes on top
 -----------------------------
+
+- Version 2.0.1
+
+  - Added option OTHER_PAGE_METATAG_DESCRIPTION for html file that are not page or article
+    Added a meta tag description 
+  - Reorder JS location inside base.html
 
 - Version 2.0.0
 

@@ -29,6 +29,11 @@
 
     {% block meta %}
         <meta name="author" content="{{ AUTHOR }}" />
+  	{% if not article and not page %}
+	    {% if OTHER_PAGE_METATAG_DESCRIPTION %}
+	    <meta name="description" content="{{ SITE_DESCRIPTION }}"/> 
+	    {% endif %}
+	{% endif %}
     {% endblock %}
 
     {# Open Graph tags #}
@@ -129,9 +134,15 @@
 
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+
+    <!-- For Cookie Consent 2-->
+    {% include 'includes/cookie_consent2.html' %}
+
     {% if SPHINX_COPYBUTTON %}
       <!-- clipboard.js and copy button -->
-      <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/copybutton.js"></script>
+      <script async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/copybutton.js"></script>
       <!-- https://github.com/zenorocha/clipboard.js -->
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha384-x6nRSkfSsKGBsvlLFHHNju+buS3zYUztVnTRz/0JKgOIk3ulS6bNce/vHOvYE2eY" crossorigin="anonymous"></script>
     {% endif %}
@@ -269,10 +280,8 @@ $(document).ready(function () {
 
 {% include 'includes/footer.html' %}
 
-<!-- Loading of jQuery moved to head -->
-
+<!-- Loading of jQuery and Bootstrap moved to head -->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
 
 {% if CUSTOM_JS %}
     <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"></script>
@@ -292,9 +301,6 @@ $(document).ready(function () {
 {% endif %}
 
 {% block scripts %}{% endblock %}
-
-<!-- For Cookie Consent 2-->
-{% include 'includes/cookie_consent2.html' %}
 
 <noscript>Your browser does not support JavaScript.</noscript>
 

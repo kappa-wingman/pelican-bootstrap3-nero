@@ -57,3 +57,6 @@ Some of the parameters may not work.
 	* SPHINX_COPYBUTTON = True
 	* Adopted from [sphinx copybutton](https://github.com/executablebooks/sphinx-copybutton)
 	* Credits for the copy button goes to [Chris Holdgraf](https://github.com/choldgraf)
+* Added option OTHER_PAGE_METATAG_DESCRIPTION
+	* It is for html file that are not page or article
+	* That would a meta tag description to the head section
