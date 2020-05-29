@@ -12,7 +12,6 @@
 {% block content %}
     <section id="content">
       <h1>{{ _('Archives for') }} {{ SITENAME }}</h1>
-	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/archives.css" type="text/css"/>
         <div id="archives">
 	  {% for year, date_year in dates|groupby('date.year')|sort(reverse=True) %}
 	    <h2>{{ year }}</h2>

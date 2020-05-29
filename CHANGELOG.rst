@@ -13,8 +13,12 @@ Use it at your own risk.
 Changes, newer changes on top
 -----------------------------
 
-- Make tables converted by docutils to use table-responsive
-  Credit for this (and for code block) goes to `Monica Granbois <https://monicagranbois.com/blog/webdev/formatting-code-with-pygments-and-jekyll/>`__
+- Version 2.0.2
+
+  - Make tables converted by docutils to use table-responsive
+    Credit for this (and for code block) goes to `Monica Granbois <https://monicagranbois.com/blog/webdev/formatting-code-with-pygments-and-jekyll/>`__
+  - Adding necessary CSS for navigation bar drop down menu
+  - Using a single file, nero.css specific for this theme
 
 - Version 2.0.1
 

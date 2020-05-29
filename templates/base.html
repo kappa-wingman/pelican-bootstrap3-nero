@@ -82,6 +82,8 @@
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/typogrify.css" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" type="text/css"/>
+    <!-- CSS specifc for this theme -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/nero.css" type="text/css"/>
     {% if SPHINX_COPYBUTTON %}
     <!-- copy button -->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/copybutton.css" type="text/css"/>
@@ -168,7 +170,6 @@
 </head>
 <body>
 
-<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/navbar.css" type="text/css"/>
 <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
     <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="navbar-header">

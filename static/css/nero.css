@@ -1,3 +1,4 @@
+/* for the table in archives.html */
 .archive_table_by_year {
   border-style: none;
   table-layout: fixed;
@@ -11,4 +12,13 @@
 .archive_table_by_year_url_col {
   min-width: 80%;
   max-width: 80%;
+}
+
+/* for the drop down menu in top nav bar */
+#navbarDropDownMenu1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        margin-left: 8px;
+        margin-right: 8px;
 }
