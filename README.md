@@ -5,7 +5,7 @@ Pelican-bootstrap3 is a Bootstrap 3 theme for Pelican, originally developed by [
 Pelican-bootstrap3-nero is forked from pelican-bootstrap3 and customized. It is a dark theme.
 
 ## Demo site
-[My blog: Kappa ICT Wingman](https://www.kappawingman.com)
+Currently I don't have a demo site for this theme. It is becaused I moved to a new theme using Bootstrap 4: [pelican-bootstrap4-nero](https://github.com/kappa-wingman/pelican-bootstrap4-nero)
 
 ## Screenshot
 
