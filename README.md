@@ -17,8 +17,13 @@ Pelican-bootstrap3-nero is forked from pelican-bootstrap3 and customized. It is 
 This theme changed a lot from the original theme.
 Some of the parameters may not work.
 
-* Know problems
+* Known problems
 	* DISABLE_SIDEBAR_TITLE_ICONS may not be working because of code changes
+
+* Options that must be set in pelicanconf.py:
+	* BOOTSTRAP_THEME = 'slate'
+	* PLUGINS = \['i18n_subsites'\] (required since pelican-bootstrap3)
+	* JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 * We have new settings specific to this theme, also check CHANGELOG.rst
 
@@ -53,6 +58,7 @@ Some of the parameters may not work.
 * JSON_LD_BREADCRUMBLIST = True
 	* If both JSON_LD is also enabled:
 	* Add type BreadcrumbList for all html
+	* Note: there is an option DISPLAY_BREADCRUMBS and have visible breadcrumbs and actually added some schema for breadcrumbs. Google search engine would take the value from that. I do not know clearly what is performed by search engine if both Breadcrumb support is enabled in both JSON-LD BREADCRUME and DISPLAY_BREADCRUMS are enabled.
 * Copy button on the top right corner of all "div.highlight pre" elements
 	* SPHINX_COPYBUTTON = True
 	* Adopted from [sphinx copybutton](https://github.com/executablebooks/sphinx-copybutton)
